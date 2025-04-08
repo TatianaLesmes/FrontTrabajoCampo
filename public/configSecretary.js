@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }).then((result) => {
                         if (result.isConfirmed) {
                             const updatedData = result.value;
-                            fetch(`https://api-parroquia.onrender.com/user/${data._id}`, {
+                            fetch(`http://localhost:3000/user/${data._id}`, {
                                 method: 'PUT',
                                 headers: {
                                     'Content-Type': 'application/json',

@@ -5,7 +5,7 @@ const getUserRole = async (email) => {
             throw new Error('No se encontró el token en localStorage');
         }
 
-        const response = await fetch('http://localhost:3200/user/', {
+        const response = await fetch('http://localhost:3000/user/', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -36,7 +36,7 @@ document.getElementById('VerificacionDeLogin').addEventListener('click', functio
 
     console.log('Intentando login con:', { mail: email, password: password });
 
-    fetch('http://localhost:3200/auth/login', {
+    fetch('http://localhost:3000/auth/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -122,7 +122,7 @@ function forgotPassword() {
         return;
     }
 
-    fetch('http://localhost:3200/auth/forgot-password', {
+    fetch('http://localhost:3000/auth/forgot-password', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -154,7 +154,7 @@ function verifyCodeRememberpassword() {
         return;
     }
 
-    fetch('http://localhost:3200/auth/verify-ResetCode', {
+    fetch('http://localhost:3000/auth/verify-ResetCode', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -201,7 +201,7 @@ function resetPassword() {
 
     console.log('Enviando solicitud al servidor');
 
-    fetch('http://localhost:3200/auth/change-Password', {
+    fetch('http://localhost:3000/auth/change-Password', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
