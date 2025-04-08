@@ -128,7 +128,7 @@ function initializeMassManagement() {
             timeSlots: selectedSlots.map(time => ({ time, available: true }))
         };
 
-        fetch('https://api-parroquia.onrender.com/massSchedule', {
+        fetch('http://localhost:3000/massSchedule', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -168,7 +168,7 @@ function initializeMassManagement() {
             return;
         }
 
-        fetch(`https://api-parroquia.onrender.com/massSchedule/time-slots?date=${dateToDelete}`)
+        fetch(`http://localhost:3000/massSchedule/time-slots?date=${dateToDelete}`)
             .then(response => response.json())
             .then(data => {
                 timeSlotsToDelete.innerHTML = '';
@@ -204,7 +204,7 @@ function initializeMassManagement() {
             return;
         }
 
-        fetch('https://api-parroquia.onrender.com/massSchedule/remove-time-slots', {
+        fetch('http://localhost:3000/massSchedule/remove-time-slots', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

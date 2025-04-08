@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function solicitarPartida(departureType) {
         try {
-            const response = await fetch('https://api-parroquia.onrender.com/requestDeparture/', {
+            const response = await fetch('http://localhost:3000/requestDeparture/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

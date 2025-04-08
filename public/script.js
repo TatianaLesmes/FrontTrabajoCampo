@@ -44,7 +44,7 @@ document.getElementById('verifyEmailBtn').addEventListener('click', async functi
     }
 
     try {
-        const response = await fetch('https://api-parroquia.onrender.com/auth/verify-Email', {
+        const response = await fetch('http://localhost:3000/auth/verify-Email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -93,7 +93,7 @@ function verifyCode() {
         return;
     }
 
-    fetch('https://api-parroquia.onrender.com/auth/verify-Code', {
+    fetch('http://localhost:3000/auth/verify-Code', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Usa la URL correcta para tu entorno local
-    fetch('http://localhost:3200/accessRole/user', {
+    fetch('http://localhost:3000/accessRole/user', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
