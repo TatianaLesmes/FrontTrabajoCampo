@@ -135,10 +135,10 @@ document.addEventListener('DOMContentLoaded', function () {
                         focusConfirm: false,
                         preConfirm: () => {
                             return {
-                                name: document.getElementById('swal-input1').value,
-                                lastName: document.getElementById('swal-input2').value,
-                                mail: document.getElementById('swal-input3').value,
-                                documentNumber: document.getElementById('swal-input4').value
+                                name: document.getElementById('swal-input1').value.trim(),
+                                lastName: document.getElementById('swal-input2').value.trim(),
+                                mail: document.getElementById('swal-input3').value.trim(),
+                                documentNumber: document.getElementById('swal-input4').value.trim()
                             };
                         }
                     }).then((result) => {
